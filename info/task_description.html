@@ -1,39 +1,43 @@
 <p>
-    <i>( Describe task in general )</i>
-</p>
+    Given a matrix A NxN where (5<=N<=10), and [x1, y1], [x2, y2] pairs where
+    (1<=x1,x2 and y1,y2<=N), x1, x2 are the row numbers of two points in the
+    matrix while y1, y2 are column numbers. Matrix A consists of zero and
+    non-zero numbers. You can pass from one point to another by moving
+    horizontally and vertically through zeros, but you can't intersect any
+    non-zeros. Be careful -- row and column started to count by 1.
+    You should to determine -- is there a way from [x1,y1] to [x2, y2]?
 
-<p>
-    Sum two passed ints
-</p>
+<p class="for_info_only" style="text-align: center"><img title="can-you-jump-through"
+                                                         src="{{ MEDIA }}can-you-jump-through.png"
+                                                         alt="can-you-jump-through"
+                                                         width="600"/></p>
+<p class="for_editor_only" style="text-align: center"><img title="can-you-jump-through"
+                                                           src="{{ MEDIA }}can-you-jump-through.png"
+                                                           alt="can-you-jump-through"
+                                                           width="380"/></p>
 
-<p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.png" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.png" alt="example" width="380px"/>
-</p>
+<p class="p1"><strong>Input: </strong>
+    A list with the next data: Matrix of A NxN (a list of lists) and two coordinates (a list of two integers).</p>
 
-<p><i>( Explain input and output values )</i></p>
-<p>
-    <strong>Input: </strong> Two arguments. Both are int
-</p>
+<p class="p1"><strong>Output: </strong>True if there’s a way from [x1,y1] to [x2, y2],
+    but false otherwise (boolean).</p>
 
-<p>
-    <strong>Output: </strong> Int. 
-</p>
-
-
-
-<div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
-    <p>
-        <strong>Example:</strong>
-    </p>
-    <pre class="brush: python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
-    </pre>
+<div class="for_info_only"><strong>Example:</strong>
+<pre class="brush: python">checkio([[
+    [0, 0, 5, 4, 0],
+    [0, 1, 5, 0, 0],
+    [0, 0, 0, 7, 2],
+    [8, 0, 0, 0, 0],
+    [0, 9, 0, 1, 0]], [1,1], [5,5]])==True
+checkio([[
+    [0, 0, 5, 4, 0],
+    [0, 0, 5, 0, 0],
+    [0, 0, 0, 7, 2],
+    [8, 0, 0, 4, 0],
+    [0, 9, 0, 1, 0]], [1,1], [1,5]])==False
+</pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
 </p>
