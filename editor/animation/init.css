@@ -78,6 +78,7 @@
     text-align: center;
     color: #294270;
     width: 160px;
+    vertical-align: top;
 }
 
 .tryit-content .btn {
