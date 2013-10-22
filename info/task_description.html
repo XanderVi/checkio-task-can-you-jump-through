@@ -1,11 +1,12 @@
 <p>
-    Given a matrix A NxN where (5<=N<=10), and [x1, y1], [x2, y2] pairs where
-    (1<=x1,x2 and y1,y2<=N), x1, x2 are the row numbers of two points in the
-    matrix while y1, y2 are column numbers. Matrix A consists of zero and
-    non-zero numbers. You can pass from one point to another by moving
+    You are given matrix A, which is NxN where (5<=N<=10,) and the pairs [x1, y1], [x2, y2]  where
+    (1<=x1,x2 and y1,y2<=N). x1 and x2 are the row numbers of two points in the
+    matrix while y1, y2 are column numbers. Matrix A consists of both zero and
+    non-zero numbers. You can move from one point to another by moving
     horizontally and vertically through zeros, but you can't intersect any
-    non-zeros. Be careful -- row and column started to count by 1.
-    You should to determine -- is there a way from [x1,y1] to [x2, y2]?
+    non-zeros. Think of each zero like it is a hoop you may jump through.
+    Be careful though, rows and columns start with 1.
+    You should try to determine if there is a way to travel from [x1,y1] to [x2, y2].
 
 <p class="for_info_only" style="text-align: center"><img title="can-you-jump-through"
                                                          src="{{ MEDIA }}can-you-jump-through.png"
@@ -17,9 +18,9 @@
                                                            width="380"/></p>
 
 <p class="p1"><strong>Input: </strong>
-    A list with the next data: Matrix of A NxN (a list of lists) and two coordinates (a list of two integers).</p>
+    A list with the following data: Matrix A, NxN (a list of lists) and two coordinates (a list of two integers).</p>
 
-<p class="p1"><strong>Output: </strong>True if there’s a way from [x1,y1] to [x2, y2],
+<p class="p1"><strong>Output: </strong>True if there is a way from [x1,y1] to [x2, y2],
     but false otherwise (boolean).</p>
 
 <div class="for_info_only"><strong>Example:</strong>
