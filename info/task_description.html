@@ -1,12 +1,22 @@
 <p>
-    You are given matrix A, which is NxN where (5<=N<=10,) and the pairs [x1, y1], [x2, y2]  where
-    (1<=x1,x2 and y1,y2<=N). x1 and x2 are the row numbers of two points in the
-    matrix while y1, y2 are column numbers. Matrix A consists of both zero and
-    non-zero numbers. You can move from one point to another by moving
-    horizontally and vertically through zeros, but you can't intersect any
-    non-zeros. Think of each zero like it is a hoop you may jump through.
-    Be careful though, rows and columns start with 1.
-    You should try to determine if there is a way to travel from [x1,y1] to [x2, y2].
+    If you have solved <a href="TODO">"How to find friends"</a>,
+    then you know how to check the existence of a path in graphs.
+    Let's add something in that problem.
+</p>
+
+<p>
+    You are given a matrix (2D array) and coordinates (row and column) of two cells with the same value.
+    The matrix consist by various digits and you can move to neighbour cells horizontally and vertically,
+    if values of cells from and to are equal.
+    Your should determine if a path is exist between the two given cells.
+</p>
+
+<p>
+    A matrix is represented as a tuple of tuples with digits.
+    Coordinates are represented as a tuple with two numbers - row and column.
+    The result should be any values which can be converted in a boolean.
+    If a path exist, then True and False if not.
+</p>
 
 <p class="for_info_only" style="text-align: center"><img title="can-you-jump-through"
                                                          src="{{ MEDIA }}can-you-jump-through.png"
@@ -17,28 +27,33 @@
                                                            alt="can-you-jump-through"
                                                            width="380"/></p>
 
-<p class="p1"><strong>Input: </strong>
-    A list with the following data: Matrix A, NxN (a list of lists) and two coordinates (a list of two integers).</p>
+<p>
+    <strong>Input: </strong>
+    Three arguments. A matrix as a tuple of tuples with integers,
+    first and second cell coordinates as tuples of two integers.
+</p>
 
-<p class="p1"><strong>Output: </strong>True if there is a way from [x1,y1] to [x2, y2],
-    but false otherwise (boolean).</p>
+<p><strong>Output: </strong>The existence of a path between two given cells
+    as a boolean or a value that can be converted to boolean.</p>
 
 <div class="for_info_only"><strong>Example:</strong>
-<pre class="brush: python">checkio([[
-    [0, 0, 5, 4, 0],
-    [0, 1, 5, 0, 0],
-    [0, 0, 0, 7, 2],
-    [8, 0, 0, 0, 0],
-    [0, 9, 0, 1, 0]], [1,1], [5,5]])==True
-checkio([[
-    [0, 0, 5, 4, 0],
-    [0, 0, 5, 0, 0],
-    [0, 0, 0, 7, 2],
-    [8, 0, 0, 4, 0],
-    [0, 9, 0, 1, 0]], [1,1], [1,5]])==False
+<pre class="brush: python">
+    can_pass()
+    <!--TODO-->
 </pre>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
+    Sometimes we don't need the full pathfinding algorithms implementation and can use
+    simplified realisation of these algorithms.
+    It can be an useful skill to find a simple ways/
 </p>
+
+<p>
+    <strong>Precondition:</strong><br>
+    0 &lt; len(matrix) &le; 10<br>
+    all(0 &lt; len(row) &le; 10 for row in matrix)<br>
+    all(all(0 &le; x &lt; 10 for x in row) for row in matrix)<br>
+    matrix[first[0]][first[1]] == matrix[second[0]][second[1]]
+    </p>
