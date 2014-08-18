@@ -1,23 +1,21 @@
-def checkio(data):
-    matrix, start, end = data
-    x1, y1 = start
-    x2, y2 = end
+def can_pass(matrix, first, second):
     return True or False
 
 
 if __name__ == '__main__':
-    assert checkio(([
-        [0, 0, 5, 4, 0],
-        [0, 1, 5, 0, 0],
-        [0, 0, 0, 7, 2],
-        [8, 0, 0, 0, 0],
-        [0, 9, 0, 1, 0]],
-        [1, 1], [5, 5])) == True, 'First example'
-
-    assert checkio([[
-        [0, 0, 5, 4, 0],
-        [0, 0, 5, 0, 0],
-        [0, 0, 0, 7, 2],
-        [8, 0, 0, 4, 0],
-        [0, 9, 0, 1, 0]],
-        [1,1], [1,5]]) == False, 'Second example'
+    assert can_pass(((0, 0, 0, 0, 0, 0),
+                     (0, 2, 2, 2, 3, 2),
+                     (0, 2, 0, 0, 0, 2),
+                     (0, 2, 0, 2, 0, 2),
+                     (0, 2, 2, 2, 0, 2),
+                     (0, 0, 0, 0, 0, 2),
+                     (2, 2, 2, 2, 2, 2),),
+                    (3, 2), (0, 5)) == True, 'First example'
+    assert can_pass(((0, 0, 0, 0, 0, 0),
+                     (0, 2, 2, 2, 3, 2),
+                     (0, 2, 0, 0, 0, 2),
+                     (0, 2, 0, 2, 0, 2),
+                     (0, 2, 2, 2, 0, 2),
+                     (0, 0, 0, 0, 0, 2),
+                     (2, 2, 2, 2, 2, 2),),
+                    (3, 3), (6, 0)) == False, 'First example'
