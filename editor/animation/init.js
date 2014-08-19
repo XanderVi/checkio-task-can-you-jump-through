@@ -164,7 +164,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
                             r.attr({fill: colorOrange1});
                         }
                         paper.text(p + cell * (col + 0.5), p + cell * (row + 0.5), String(matrix[row][col])).attr(
-                            {stroke: colorBlue4, fontFamily: "Roboto", fontWeight: "bold", fontSize: 36, textAnchor: "middle", dominantBaseline: "middle"});
+                            {stroke: colorBlue4, fontFamily: "Roboto", fontWeight: "bold", fontSize: 36, textAnchor: "middle", dominantBaseline: "central"});
                     }
                 }
             }
