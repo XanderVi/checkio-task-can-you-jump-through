@@ -24,5 +24,5 @@ api.add_listener(
                        'python-27': cover,  # or None
                        'python-3': cover
                    },
-                   checker=checker()
+                   checker=checker
     ).on_ready)
