@@ -43,7 +43,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
             var fname = 'can_pass';
 
             var checkioInput = data.in;
-            var checkioInputStr = fname + '(' + JSON.stringify(checkioInput[0]) + ", " + JSON.stringify(checkioInput[2]) + ", " + JSON.stringify(checkioInput[2]) + ')';
+            var checkioInputStr = fname + '(' + JSON.stringify(checkioInput[0]) + ", " + JSON.stringify(checkioInput[1]) + ", " + JSON.stringify(checkioInput[2]) + ')';
             checkioInputStr = checkioInputStr.replace(/\[/g, "(").replace(/]/g, ")");
 
             var failError = function (dError) {
