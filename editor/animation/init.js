@@ -81,7 +81,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210', 'snap.svg_030'],
 
                 //if you need additional info from tests (if exists)
                 var explanation = data.ext["explanation"];
-                $content.find('.output').html('&nbsp;Your result:&nbsp;' + JSON.stringify(userResult[1]));
+                $content.find('.output').html('&nbsp;Your result:&nbsp;' + userResult[1]);
                 if (!result) {
                     $content.find('.answer').html('Right result:&nbsp;' + JSON.stringify(rightResult));
                     $content.find('.answer').addClass('error');
