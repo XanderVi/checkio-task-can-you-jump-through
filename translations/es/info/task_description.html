@@ -1,0 +1,73 @@
+<p>
+  Si has completado la misi&oacute;n
+    <a href="http://www.checkio.org/mission/find-friends/share/3061fec1b35588e4bae8ad69db073aab/">
+      &quot;&iquest;C&oacute;mo encontrar amigos?&quot;</a>, entonces ya sabes c&oacute;mo comprobar la
+      existencia de una ruta (<em>path</em>) en grafos. Tratemos de a&ntilde;adir algo m&aacute;s a ese problema.
+</p>
+
+<p>
+    Se te dar&aacute; una matriz (array 2D) y las coordenadas (fila y columna) de dos celdas
+    con el mismo valor. La matriz se compone de d&iacute;gitos y puedes mover a las celdas
+    vecinas ya sea horizontal o verticalmente,  siempre y cuando los valores de las
+    celdas de origen y destino sean iguales. Deber&aacute;s determinar si existe una ruta
+    entre las dos celdas indicadas.
+</p>
+
+<p>
+    Una matriz se representa como una tupla de tuplas con d&iacute;gitos. Las coordenadas
+    se representan como una tupla con dos n&uacute;meros: fila y columna. El resultado
+    deber&aacute; ser cualquier valor que pueda convertirse en un valor l&oacute;gico (<em>bool</em>).
+    Si existe la ruta, deber&aacute;s regresar &quot;Verdadero&quot;  (<em>True</em>); de otra forma deber&aacute;s
+    regresar &quot;Falso&quot; (<em>False</em>).
+</p>
+
+<p style="text-align: center">
+    <img src="{{ MEDIA }}can-jump-through.svg" alt="can-you-jump-through" style="max-width: 430px">
+</p>
+
+<p>
+    <strong>Datos de Entrada: </strong>
+    Tres argumentos. Una matriz como una tupla de tuplas con enteros (<em>int</em>);
+    y las coordenadas de la primera y segunda celda, como tuplas de dos enteros (<em>int</em>).
+</p>
+
+<p><strong>Salida: </strong>
+  La existencia de una ruta (<em>path</em>) entre las dos celdas, como un valor
+  booleano (<em>bool</em>) o como cualquier valor que puede ser convertido a booleano.</p>
+
+<div class="for_info_only"><strong>Ejemplo:</strong>
+<pre class="brush: python">
+can_pass(((0, 0, 0, 0, 0, 0),
+          (0, 2, 2, 2, 3, 2),
+          (0, 2, 0, 0, 0, 2),
+          (0, 2, 0, 2, 0, 2),
+          (0, 2, 2, 2, 0, 2),
+          (0, 0, 0, 0, 0, 2),
+          (2, 2, 2, 2, 2, 2),),
+         (3, 2), (0, 5)) == True, 'First example'
+can_pass(((0, 0, 0, 0, 0, 0),
+          (0, 2, 2, 2, 3, 2),
+          (0, 2, 0, 0, 0, 2),
+          (0, 2, 0, 2, 0, 2),
+          (0, 2, 2, 2, 0, 2),
+          (0, 0, 0, 0, 0, 2),
+          (2, 2, 2, 2, 2, 2),),
+         (3, 3), (6, 0)) == False,
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>&iquest;C&oacute;mo se usa?:</strong>
+    A veces no es necesario implementar por completo los algoritmos de b&uacute;squeda
+    de rutas (<em>pathfinding</em>) sino que podemos usar una versi&oacute;n simplificada.
+    Esta habilidad puede ser &uacute;til para encontrar alternativas m&aacute;s simples.
+</p>
+
+<p>
+    <strong>Condiciones:</strong><br>
+    1 &lt; len(matrix) &le; 10<br>
+    all(1 &lt; len(row) &le; 10 for row in matrix)<br>
+    all(all(0 &le; x &lt; 10 for x in row) for row in matrix)<br>
+    matrix[first[0]][first[1]] == matrix[second[0]][second[1]]<br>
+    first != second
+</p>
