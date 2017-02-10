@@ -1,21 +1,21 @@
 <p>
-    If you have solved the
+    Wenn Du die Mission
     <a href="http://www.checkio.org/mission/find-friends/share/3061fec1b35588e4bae8ad69db073aab/">
         "How to find friends"</a>
-    mission, then you already know how to check for the existence of a path
-    in graphs. Let's try to add something more to that problem.
+    gelöst hast weißt Du schon, wie Du das Vorhandensein eines Weges in einem Diagramm prüfst.
+    Wir werden hier dieses Problem noch etwas ausbauen.
 </p>
 
 <p>
-    You are given a matrix (2D array) and the coordinates (row and column) of two cells with the same value. The matrix
-    consists of digits. You may move to neighbouring cells either horizontally or vertically provided the values of the
-    origin and destination cells are equal. You should determine if a path exists between two given cells.
+    Gegeben sind eine Matrix (2D Array) und die Koordinaten (Zeile und Spalte) zweier Zellen mit identischem Wert. Die 
+    Matrix besteht aus Zellen mit Zahlenwerten. Zu benachbarten Zellen kann man horizontal oder vertikal gelangen, wenn die Werte identisch sind.
+    Du sollst herausfinden, ob zwischen den zwei gegebenen Zellen ein Weg existiert.
 </p>
 
 <p>
-    A matrix is represented as a tuple of tuples with digits. Coordinates are represented as a tuple with two numbers:
-    row and column. The result should be any value which can be converted into a boolean. If a path exists, then return
-    True. Return False if there is none.
+    Die Matrix besteht aus einem Tupel mit weiteren Tupel mit Zahlen. Koordinaten werden als Tupel mit zwei Zahlen in Zeile und Spalte
+    dargestellt. Das Ergebnis muss als ein boolescher Wert interpretierbar sein. Gib True zurück wenn ein Weg existiert, 
+    False, wenn nicht.
 </p>
 
 <p style="text-align: center">
@@ -23,15 +23,16 @@
 </p>
 
 <p>
-    <strong>Input: </strong>
-    Three arguments. A matrix as a tuple of tuples with integers,
-    first and second cell coordinates as tuples of two integers.
+    <strong>Eingabe: </strong>
+    Drei Argumente. Eine Matrix als Tupel aus weiteren Tupel mit Integern, sowie die Koordinaten der 
+    ersten und zweiten Zelle als Tupel mit zwei Integern.
 </p>
 
-<p><strong>Output: </strong>The existence of a path between two given cells
-    as a boolean or a value that can be converted to boolean.</p>
+<p><strong>Ausgabe: </strong>Ein boolescher Wert oder ein Wert, der in einen booleschen Wert konvertiert werden kann und 
+    angibt, ob ein Weg zwischen den zwei gegebenen Zellen existiert.
+ </p>
 
-<div class="for_info_only"><strong>Example:</strong>
+<div class="for_info_only"><strong>Beispiele:</strong>
 <pre class="brush: python">
 can_pass(((0, 0, 0, 0, 0, 0),
           (0, 2, 2, 2, 3, 2),
@@ -53,14 +54,14 @@ can_pass(((0, 0, 0, 0, 0, 0),
 </div>
 
 <p class="for_info_only">
-    <strong>How it is used: </strong>
-    Sometimes we don't need the full pathfinding algorithms implementation and can use
-    simplified realisation of these algorithms.
-    It can be an useful skill to find a simple ways.
+    <strong>Wozu das gut ist: </strong>
+    Manchmal ist keine vollständige Implementierung eines Wegfindungs-Algorithmus notwendig,
+    sondern wir ziehen eine vereinfachte Realisierung eines solchen Algorithmus vor.
+    Einfachere Wege zu finden kann sich als überaus wertvoller Skill erweisen.
 </p>
 
 <p>
-    <strong>Precondition:</strong><br>
+    <strong>Voraussetzungen:</strong><br>
     1 &lt; len(matrix) &le; 10<br>
     all(1 &lt; len(row) &le; 10 for row in matrix)<br>
     all(all(0 &le; x &lt; 10 for x in row) for row in matrix)<br>
