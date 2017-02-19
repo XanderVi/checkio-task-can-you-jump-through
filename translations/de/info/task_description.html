@@ -1,0 +1,70 @@
+<p>
+    Wenn Du die Mission
+    <a href="http://www.checkio.org/mission/find-friends/share/3061fec1b35588e4bae8ad69db073aab/">
+        "How to find friends"</a>
+    gelöst hast weißt Du schon, wie Du das Vorhandensein eines Weges in einem Diagramm prüfst.
+    Wir werden hier dieses Problem noch etwas ausbauen.
+</p>
+
+<p>
+    Gegeben sind eine Matrix (2D Array) und die Koordinaten (Zeile und Spalte) zweier Zellen mit identischem Wert. Die 
+    Matrix besteht aus Zellen mit Zahlenwerten. Zu benachbarten Zellen kann man horizontal oder vertikal gelangen, wenn die Werte identisch sind.
+    Du sollst herausfinden, ob zwischen den zwei gegebenen Zellen ein Weg existiert.
+</p>
+
+<p>
+    Die Matrix besteht aus einem Tupel mit weiteren Tupel mit Zahlen. Koordinaten werden als Tupel mit zwei Zahlen in Zeile und Spalte
+    dargestellt. Das Ergebnis muss als ein boolescher Wert interpretierbar sein. Gib True zurück wenn ein Weg existiert, 
+    False, wenn nicht.
+</p>
+
+<p style="text-align: center">
+    <img src="{{ MEDIA }}can-jump-through.svg" alt="can-you-jump-through" style="max-width: 430px">
+</p>
+
+<p>
+    <strong>Eingabe: </strong>
+    Drei Argumente. Eine Matrix als Tupel aus weiteren Tupel mit Integern, sowie die Koordinaten der 
+    ersten und zweiten Zelle als Tupel mit zwei Integern.
+</p>
+
+<p><strong>Ausgabe: </strong>Ein boolescher Wert oder ein Wert, der in einen booleschen Wert konvertiert werden kann und 
+    angibt, ob ein Weg zwischen den zwei gegebenen Zellen existiert.
+ </p>
+
+<div class="for_info_only"><strong>Beispiele:</strong>
+<pre class="brush: python">
+can_pass(((0, 0, 0, 0, 0, 0),
+          (0, 2, 2, 2, 3, 2),
+          (0, 2, 0, 0, 0, 2),
+          (0, 2, 0, 2, 0, 2),
+          (0, 2, 2, 2, 0, 2),
+          (0, 0, 0, 0, 0, 2),
+          (2, 2, 2, 2, 2, 2),),
+         (3, 2), (0, 5)) == True, 'First example'
+can_pass(((0, 0, 0, 0, 0, 0),
+          (0, 2, 2, 2, 3, 2),
+          (0, 2, 0, 0, 0, 2),
+          (0, 2, 0, 2, 0, 2),
+          (0, 2, 2, 2, 0, 2),
+          (0, 0, 0, 0, 0, 2),
+          (2, 2, 2, 2, 2, 2),),
+         (3, 3), (6, 0)) == False,
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>Wozu das gut ist: </strong>
+    Manchmal ist keine vollständige Implementierung eines Wegfindungs-Algorithmus notwendig,
+    sondern wir ziehen eine vereinfachte Realisierung eines solchen Algorithmus vor.
+    Einfachere Wege zu finden kann sich als überaus wertvoller Skill erweisen.
+</p>
+
+<p>
+    <strong>Voraussetzungen:</strong><br>
+    1 &lt; len(matrix) &le; 10<br>
+    all(1 &lt; len(row) &le; 10 for row in matrix)<br>
+    all(all(0 &le; x &lt; 10 for x in row) for row in matrix)<br>
+    matrix[first[0]][first[1]] == matrix[second[0]][second[1]]<br>
+    first != second
+</p>
