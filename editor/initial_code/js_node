@@ -1,0 +1,29 @@
+"use strict";
+
+function canPass(matrix, first, second) {
+    // your code here
+    return 0;
+}
+
+var assert = require('assert');
+if (!global.is_checking) {
+    // These "asserts" are used for self-checking and not for an auto-testing
+
+    assert.equal(canPass([[0, 0, 0, 0, 0, 0],
+                          [0, 2, 2, 2, 3, 2],
+                          [0, 2, 0, 0, 0, 2],
+                          [0, 2, 0, 2, 0, 2],
+                          [0, 2, 2, 2, 0, 2],
+                          [0, 0, 0, 0, 0, 2],
+                          [2, 2, 2, 2, 2, 2]],
+                          [3, 2], [0, 5]), true)
+    assert.equal(canPass([[0, 0, 0, 0, 0, 0],
+                          [0, 2, 2, 2, 3, 2],
+                          [0, 2, 0, 0, 0, 2],
+                          [0, 2, 0, 2, 0, 2],
+                          [0, 2, 2, 2, 0, 2],
+                          [0, 0, 0, 0, 0, 2],
+                          [2, 2, 2, 2, 2, 2]],
+                          [3, 3], [6, 0]), false)
+    console.log("Coding complete? Click 'Check' to earn cool rewards!");
+}

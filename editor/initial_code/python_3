@@ -1,5 +1,5 @@
 def can_pass(matrix, first, second):
-    return True or False
+    return 0
 
 
 if __name__ == '__main__':

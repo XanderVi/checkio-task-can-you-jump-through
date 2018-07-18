@@ -24,14 +24,34 @@
 
 <p>
     <strong>Input: </strong>
-    Three arguments. A matrix as a tuple of tuples with integers,
-    first and second cell coordinates as tuples of two integers.
+    Three arguments. A matrix as a list of lists with integers,
+    first and second cell coordinates as lists of two integers.
 </p>
 
 <p><strong>Output: </strong>The existence of a path between two given cells
     as a boolean or a value that can be converted to boolean.</p>
 
 <div class="for_info_only"><strong>Example:</strong>
+{% if interpreter.slug == "js-node" %}
+<pre class="brush: javascript">
+canPass([[0, 0, 0, 0, 0, 0],
+         [0, 2, 2, 2, 3, 2],
+         [0, 2, 0, 0, 0, 2],
+         [0, 2, 0, 2, 0, 2],
+         [0, 2, 2, 2, 0, 2],
+         [0, 0, 0, 0, 0, 2],
+         [2, 2, 2, 2, 2, 2]],
+         [3, 2], [0, 5]) == true
+canPass([[0, 0, 0, 0, 0, 0],
+         [0, 2, 2, 2, 3, 2],
+         [0, 2, 0, 0, 0, 2],
+         [0, 2, 0, 2, 0, 2],
+         [0, 2, 2, 2, 0, 2],
+         [0, 0, 0, 0, 0, 2],
+         [2, 2, 2, 2, 2, 2]],
+         [3, 3], [6, 0]) == false
+</pre>
+{% else %}
 <pre class="brush: python">
 can_pass(((0, 0, 0, 0, 0, 0),
           (0, 2, 2, 2, 3, 2),
@@ -40,7 +60,7 @@ can_pass(((0, 0, 0, 0, 0, 0),
           (0, 2, 2, 2, 0, 2),
           (0, 0, 0, 0, 0, 2),
           (2, 2, 2, 2, 2, 2),),
-         (3, 2), (0, 5)) == True, 'First example'
+          (3, 2), (0, 5)) == True, 'First example'
 can_pass(((0, 0, 0, 0, 0, 0),
           (0, 2, 2, 2, 3, 2),
           (0, 2, 0, 0, 0, 2),
@@ -48,8 +68,9 @@ can_pass(((0, 0, 0, 0, 0, 0),
           (0, 2, 2, 2, 0, 2),
           (0, 0, 0, 0, 0, 2),
           (2, 2, 2, 2, 2, 2),),
-         (3, 3), (6, 0)) == False,
+          (3, 3), (6, 0)) == False,
 </pre>
+{% endif %}
 </div>
 
 <p class="for_info_only">
